@@ -1,0 +1,210 @@
+{
+  "nyplAPI": {
+    "request": {
+      "uuid": {
+        "$": "8cb0dc10-09be-0131-1567-58d385a7b928"
+      }
+    },
+    "response": {
+      "headers": {
+        "status": {
+          "$": "success"
+        },
+        "code": {
+          "$": "200"
+        },
+        "message": {
+          "$": "ok"
+        }
+      },
+      "mods": {
+        "version": "3.4",
+        "schemaLocation": "http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-4.xsd",
+        "titleInfo": {
+          "type": "",
+          "authority": "",
+          "usage": "primary",
+          "lang": "eng",
+          "script": "",
+          "title": {
+            "$": "Our Friend"
+          },
+          "partNumber": {
+            "$": "Volume 1, number 1 (August 1876)"
+          }
+        },
+        "typeOfResource": {
+          "usage": "primary",
+          "$": "text"
+        },
+        "genre": [
+          {
+            "authority": "lctgm",
+            "valueURI": "http://id.loc.gov/vocabulary/graphicMaterials/tgm003185",
+            "$": "Documents"
+          },
+          {
+            "authority": "lctgm",
+            "valueURI": "http://id.loc.gov/vocabulary/graphicMaterials/tgm007068",
+            "$": "Newspapers"
+          },
+          {
+            "authority": "lctgm",
+            "valueURI": "http://id.loc.gov/vocabulary/graphicMaterials/tgm007641",
+            "$": "Periodicals"
+          }
+        ],
+        "originInfo": {
+          "dateCreated": {
+            "encoding": "w3cdtf",
+            "keyDate": "yes",
+            "$": "1876-08"
+          }
+        },
+        "language": {
+          "objectPart": "",
+          "languageTerm": [
+            {
+              "authority": "iso639-2b",
+              "valueURI": "http://id.loc.gov/vocabulary/iso639-2/eng",
+              "type": "code",
+              "$": "eng"
+            },
+            {
+              "authority": "iso639-2b",
+              "valueURI": "http://id.loc.gov/vocabulary/iso639-2/eng",
+              "type": "text",
+              "$": "English"
+            }
+          ]
+        },
+        "identifier": [
+          {
+            "type": "local_bnumber",
+            "displayLabel": "NYPL catalog ID (B-number)",
+            "$": "b14520874"
+          },
+          {
+            "type": "local_mss",
+            "displayLabel": "MSS Unit ID",
+            "$": "2903"
+          },
+          {
+            "type": "local_archives_ead",
+            "displayLabel": "Archives EAD ID",
+            "$": "932024"
+          },
+          {
+            "type": "local_photo_order",
+            "displayLabel": "Photo Order",
+            "$": "51263"
+          },
+          {
+            "type": "uuid",
+            "$": "78c27090-09be-0131-13b5-58d385a7b928"
+          }
+        ],
+        "location": {
+          "physicalLocation": [
+            {
+              "authority": "marcorg",
+              "type": "repository",
+              "$": "nn"
+            },
+            {
+              "type": "division",
+              "$": "Manuscripts and Archives Division"
+            },
+            {
+              "type": "division_short_name",
+              "$": "Manuscripts and Archives Division"
+            },
+            {
+              "type": "code",
+              "$": "MSS"
+            }
+          ],
+          "shelfLocator": {
+            "$": "MssCol 2903"
+          }
+        },
+        "relatedItem": {
+          "type": "host",
+          "titleInfo": {
+            "title": {
+              "$": "Our Friend"
+            }
+          },
+          "identifier": [
+            {
+              "type": "uuid",
+              "$": "76202700-a448-013d-a2a0-0242ac110003"
+            },
+            {
+              "type": "local_archives_ead",
+              "$": "932024"
+            },
+            {
+              "type": "local_archives_components",
+              "$": "728195"
+            }
+          ],
+          "relatedItem": {
+            "type": "host",
+            "titleInfo": {
+              "title": {
+                "$": "Series V: Other Works"
+              }
+            },
+            "identifier": [
+              {
+                "type": "uuid",
+                "$": "bea55860-a43e-013d-705b-0242ac110002"
+              },
+              {
+                "type": "local_archives_ead",
+                "$": "932013"
+              },
+              {
+                "type": "local_archives_components",
+                "$": "728184"
+              }
+            ],
+            "relatedItem": {
+              "type": "host",
+              "titleInfo": {
+                "title": {
+                  "$": "Stratemeyer Syndicate records"
+                }
+              },
+              "identifier": [
+                {
+                  "type": "uuid",
+                  "$": "a592e400-a43e-013d-0b89-0242ac110003"
+                },
+                {
+                  "type": "local_bnumber",
+                  "$": "b14520874"
+                },
+                {
+                  "type": "local_mss",
+                  "$": "2903"
+                },
+                {
+                  "type": "local_archives_collections",
+                  "$": "2903"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "rightsStatement": {
+        "$": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future."
+      },
+      "rightsStatementURI": {
+        "$": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+      }
+    }
+  }
+}

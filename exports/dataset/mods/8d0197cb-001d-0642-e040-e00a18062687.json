@@ -1,0 +1,218 @@
+{
+  "nyplAPI": {
+    "request": {
+      "uuid": {
+        "$": "8d0197cb-001d-0642-e040-e00a18062687"
+      }
+    },
+    "response": {
+      "headers": {
+        "status": {
+          "$": "success"
+        },
+        "code": {
+          "$": "200"
+        },
+        "message": {
+          "$": "ok"
+        }
+      },
+      "mods": {
+        "version": "3.4",
+        "schemaLocation": "http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-4.xsd",
+        "titleInfo": {
+          "type": "",
+          "authority": "",
+          "usage": "primary",
+          "lang": "eng",
+          "script": "",
+          "title": {
+            "$": "Harriet Stratemeyer, Senior at Wellesley College"
+          }
+        },
+        "typeOfResource": {
+          "usage": "primary",
+          "$": "still image"
+        },
+        "genre": [
+          {
+            "authority": "lctgm",
+            "valueURI": "http://id.loc.gov/vocabulary/graphicMaterials/tgm007721",
+            "usage": "primary",
+            "$": "Photographs"
+          },
+          {
+            "authority": "lctgm",
+            "valueURI": "http://id.loc.gov/vocabulary/graphicMaterials/tgm008085",
+            "$": "Portraits"
+          }
+        ],
+        "originInfo": {
+          "dateCreated": {
+            "encoding": "w3cdtf",
+            "qualifier": "approximate",
+            "keyDate": "yes",
+            "$": "1910"
+          }
+        },
+        "note": {
+          "type": "content",
+          "$": "Title from undigitized verso."
+        },
+        "subject": {
+          "name": {
+            "type": "personal",
+            "authority": "naf",
+            "valueURI": "http://id.loc.gov/authorities/names/n83169423",
+            "namePart": {
+              "$": "Adams, Harriet Stratemeyer"
+            }
+          }
+        },
+        "identifier": [
+          {
+            "type": "local_bnumber",
+            "displayLabel": "NYPL catalog ID (B-number)",
+            "$": "b14520874"
+          },
+          {
+            "type": "local_mss",
+            "displayLabel": "MSS Unit ID",
+            "$": "2903"
+          },
+          {
+            "type": "local_archives_ead",
+            "displayLabel": "Archives EAD ID",
+            "$": "930451"
+          },
+          {
+            "type": "uuid",
+            "$": "06d0e000-c6da-012f-cabe-58d385a7bc34"
+          }
+        ],
+        "location": {
+          "physicalLocation": [
+            {
+              "authority": "marcorg",
+              "type": "repository",
+              "$": "nn"
+            },
+            {
+              "type": "division",
+              "$": "Manuscripts and Archives Division"
+            },
+            {
+              "type": "division_short_name",
+              "$": "Manuscripts and Archives Division"
+            },
+            {
+              "type": "code",
+              "$": "MSS"
+            }
+          ],
+          "shelfLocator": {
+            "$": "MssCol 2903"
+          }
+        },
+        "relatedItem": {
+          "type": "host",
+          "titleInfo": {
+            "title": {
+              "$": "Harriet Stratemeyer"
+            }
+          },
+          "identifier": [
+            {
+              "type": "uuid",
+              "$": "c1961300-a442-013d-00d9-0242ac110004"
+            },
+            {
+              "type": "local_archives_ead",
+              "$": "930451"
+            },
+            {
+              "type": "local_archives_components",
+              "$": "726622"
+            }
+          ],
+          "relatedItem": {
+            "type": "host",
+            "titleInfo": {
+              "title": {
+                "$": "Series I.J: Visual Material"
+              }
+            },
+            "identifier": [
+              {
+                "type": "uuid",
+                "$": "e3834e90-a43e-013d-0b31-0242ac110003"
+              },
+              {
+                "type": "local_archives_ead",
+                "$": "930430"
+              },
+              {
+                "type": "local_archives_components",
+                "$": "726601"
+              }
+            ],
+            "relatedItem": {
+              "type": "host",
+              "titleInfo": {
+                "title": {
+                  "$": "Series I: Correspondence"
+                }
+              },
+              "identifier": [
+                {
+                  "type": "uuid",
+                  "$": "b688f570-a43e-013d-e10c-0242ac110003"
+                },
+                {
+                  "type": "local_archives_ead",
+                  "$": "929580"
+                },
+                {
+                  "type": "local_archives_components",
+                  "$": "725751"
+                }
+              ],
+              "relatedItem": {
+                "type": "host",
+                "titleInfo": {
+                  "title": {
+                    "$": "Stratemeyer Syndicate records"
+                  }
+                },
+                "identifier": [
+                  {
+                    "type": "uuid",
+                    "$": "a592e400-a43e-013d-0b89-0242ac110003"
+                  },
+                  {
+                    "type": "local_bnumber",
+                    "$": "b14520874"
+                  },
+                  {
+                    "type": "local_mss",
+                    "$": "2903"
+                  },
+                  {
+                    "type": "local_archives_collections",
+                    "$": "2903"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "rightsStatement": {
+        "$": "The copyright and related rights status of this item has been reviewed by The New York Public Library, but we were unable to make a conclusive determination as to the copyright status of the item. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use."
+      },
+      "rightsStatementURI": {
+        "$": "http://rightsstatements.org/vocab/UND/1.0/"
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/** Build web/public/corpus.json from MODS + tesseract OCR. */
+/** Build web/public/corpus.json from MODS + tesseract OCR + overrides + dedupe. */
 import { execSync } from "child_process";
 import { readFileSync, writeFileSync, copyFileSync, mkdirSync, existsSync } from "fs";
 import { join, dirname } from "path";
@@ -10,6 +10,7 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const DATA = join(ROOT, "data");
 const WEB_PUBLIC = join(ROOT, "web", "public");
 const IMAGES_OUT = join(WEB_PUBLIC, "images");
+const OVERRIDES_PATH = join(DATA, "processed", "ocr_overrides.json");
 
 function dollar(obj) {
   if (obj == null) return obj;
@@ -51,15 +52,21 @@ function yearFromDate(dateStr) {
 
 function ocrImage(imagePath) {
   try {
-    return execSync(`tesseract "${imagePath}" stdout 2>/dev/null`, {
+    return execSync(`tesseract "${imagePath}" stdout -l eng 2>/dev/null`, {
       encoding: "utf8",
       maxBuffer: 4 * 1024 * 1024,
     })
       .replace(/\s+\n/g, "\n")
+      .replace(/\n{3,}/g, "\n\n")
       .trim();
   } catch {
     return "";
   }
+}
+
+function loadOverrides() {
+  if (!existsSync(OVERRIDES_PATH)) return {};
+  return JSON.parse(readFileSync(OVERRIDES_PATH, "utf8"));
 }
 
 function loadItems() {
@@ -95,8 +102,59 @@ function loadItems() {
   });
 }
 
+function mergeDuplicates(items) {
+  const groups = new Map();
+  for (const item of items) {
+    const key = `${item.title}|${item.date || ""}|${item.type}`;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(item);
+  }
+
+  const merged = [];
+  for (const group of groups.values()) {
+    group.sort((a, b) => a.uuid.localeCompare(b.uuid));
+    const primary = { ...group[0] };
+    if (group.length > 1) {
+      primary.alternateScans = group.slice(1).map((g) => ({
+        uuid: g.uuid,
+        image: g.image,
+        item_link: g.item_link,
+        ocr: g.ocr,
+      }));
+      if (primary.type === "document") {
+        const best = group.reduce((a, b) => ((a.ocr?.length || 0) >= (b.ocr?.length || 0) ? a : b));
+        primary.ocr = best.ocr;
+        primary.uuid = best.uuid;
+        primary.image = best.image;
+        primary.item_link = best.item_link;
+        primary.image_id = best.image_id;
+        primary.alternateScans = group
+          .filter((g) => g.uuid !== primary.uuid)
+          .map((g) => ({ uuid: g.uuid, image: g.image, item_link: g.item_link, ocr: g.ocr }));
+      }
+    }
+    merged.push(primary);
+  }
+
+  merged.sort((a, b) => {
+    const da = a.date || "";
+    const db = b.date || "";
+    return da.localeCompare(db) || a.title.localeCompare(b.title);
+  });
+  return merged;
+}
+
+function searchText(item) {
+  const parts = [item.title, item.place, item.date, item.ocr || ""];
+  if (item.alternateScans) {
+    for (const alt of item.alternateScans) parts.push(alt.ocr || "");
+  }
+  return parts.filter(Boolean).join(" ").toLowerCase();
+}
+
 function main() {
   mkdirSync(IMAGES_OUT, { recursive: true });
+  const overrides = loadOverrides();
   const items = loadItems();
 
   for (const item of items) {
@@ -106,27 +164,28 @@ function main() {
 
     if (item._isDocument) {
       process.stderr.write(`OCR ${item.uuid.slice(0, 8)}…\n`);
-      item.ocr = ocrImage(src);
+      item.ocr = overrides[item.uuid] || ocrImage(src);
     }
     delete item._isDocument;
   }
 
-  items.sort((a, b) => {
-    const da = a.date || "";
-    const db = b.date || "";
-    return da.localeCompare(db) || a.title.localeCompare(b.title);
-  });
+  const deduped = mergeDuplicates(items);
+  for (const item of deduped) {
+    item.searchText = searchText(item);
+  }
 
   const corpus = {
     generated_at: new Date().toISOString(),
     collection: "Stratemeyer Syndicate records",
     nypl_collection:
       "https://digitalcollections.nypl.org/collections/a592e400-a43e-013d-0b89-0242ac110003",
-    items,
+    item_count: deduped.length,
+    scan_count: items.length,
+    items: deduped,
   };
 
   writeFileSync(join(WEB_PUBLIC, "corpus.json"), JSON.stringify(corpus, null, 2));
-  console.log(`Wrote ${items.length} items → web/public/corpus.json`);
+  console.log(`Wrote ${deduped.length} timeline panels (${items.length} scans) → web/public/corpus.json`);
 }
 
 main();

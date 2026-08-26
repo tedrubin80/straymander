@@ -1,16 +1,23 @@
+import Link from "next/link";
+import SearchPanel from "@/components/SearchPanel";
 import Timeline from "@/components/Timeline";
-import type { Corpus } from "@/lib/types";
-import { readFileSync } from "fs";
-import { join } from "path";
+import { loadCorpus } from "@/lib/corpus";
 
 export const dynamic = "force-static";
 
-function loadCorpus(): Corpus {
-  const path = join(process.cwd(), "public", "corpus.json");
-  return JSON.parse(readFileSync(path, "utf8")) as Corpus;
-}
-
 export default function HomePage() {
   const corpus = loadCorpus();
-  return <Timeline corpus={corpus} />;
+  return (
+    <>
+      <SearchPanel items={corpus.items} />
+      <Timeline
+        items={corpus.items}
+        meta={{
+          item_count: corpus.item_count,
+          scan_count: corpus.scan_count,
+          nypl_collection: corpus.nypl_collection,
+        }}
+      />
+    </>
+  );
 }

@@ -47,16 +47,26 @@ Do not commit `NYPL_API_TOKEN`. Scans remain courtesy of The New York Public Lib
 
 ## Site (timeline + OCR)
 
-Static Next.js app in [`web/`](web/) — no database. Documents are OCR'd with Tesseract at build time.
+Static Next.js app in [`web/`](web/) — no database. Documents are OCR'd with Tesseract; legal transfers have manual cleanup in `data/processed/ocr_overrides.json`.
 
 ```bash
-# Regenerate corpus.json + copy images (requires tesseract-ocr)
-npm run corpus
-
-cd web && npm install && npm run dev   # http://localhost:3000
+npm run corpus              # rebuild corpus.json + copy images
+cd web && npm run dev       # http://localhost:3000
 ```
 
-Deploy to Vercel: **Root Directory = `web`**, no env vars needed.
+Features: paneled timeline (1876–1938), full-text search over OCR, per-item pages, duplicate-scan merging.
+
+Deploy to Vercel: **Root Directory = `web`**, no env vars.
+
+- **Live:** https://web-one-gamma-28.vercel.app
+- **Dataset:** [Hugging Face](https://huggingface.co/datasets/datamatters24/straymander-stratemeyer) · [Kaggle](https://www.kaggle.com/datasets/theodorerubin/stratemeyer-syndicate-nypl)
+
+## Publish & backup
+
+```bash
+bash ~/scripts/straymander-publish-datasets.sh   # HF + Kaggle
+bash ~/scripts/straymander-backup-storagebox.sh  # storagebox:straymander
+```
 
 ## Refresh from NYPL
 

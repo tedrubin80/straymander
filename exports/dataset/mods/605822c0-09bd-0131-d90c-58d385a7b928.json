@@ -1,0 +1,295 @@
+{
+  "nyplAPI": {
+    "request": {
+      "uuid": {
+        "$": "605822c0-09bd-0131-d90c-58d385a7b928"
+      }
+    },
+    "response": {
+      "headers": {
+        "status": {
+          "$": "success"
+        },
+        "code": {
+          "$": "200"
+        },
+        "message": {
+          "$": "ok"
+        }
+      },
+      "mods": {
+        "version": "3.4",
+        "schemaLocation": "http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-4.xsd",
+        "titleInfo": {
+          "type": "",
+          "authority": "",
+          "usage": "primary",
+          "lang": "eng",
+          "script": "",
+          "title": {
+            "$": "Transfer of copyright for \u201cThe Young Band Master\u201d by Capt. Ralph Bonehill"
+          }
+        },
+        "name": [
+          {
+            "type": "corporate",
+            "authority": "naf",
+            "valueURI": "http://id.loc.gov/authorities/names/no2021028814",
+            "usage": "primary",
+            "namePart": {
+              "$": "Munro's Publishing House"
+            },
+            "role": {
+              "roleTerm": [
+                {
+                  "valueURI": "http://id.loc.gov/vocabulary/relators/fpy",
+                  "authority": "marcrelator",
+                  "type": "code",
+                  "$": "fpy"
+                },
+                {
+                  "valueURI": "http://id.loc.gov/vocabulary/relators/fpy",
+                  "authority": "marcrelator",
+                  "type": "text",
+                  "$": "First party"
+                }
+              ]
+            }
+          },
+          {
+            "type": "personal",
+            "authority": "naf",
+            "valueURI": "http://id.loc.gov/authorities/names/n80125963",
+            "namePart": {
+              "$": "Stratemeyer, Edward, 1862-1930"
+            },
+            "role": {
+              "roleTerm": [
+                {
+                  "valueURI": "http://id.loc.gov/vocabulary/relators/spy",
+                  "authority": "marcrelator",
+                  "type": "code",
+                  "$": "spy"
+                },
+                {
+                  "valueURI": "http://id.loc.gov/vocabulary/relators/spy",
+                  "authority": "marcrelator",
+                  "type": "text",
+                  "$": "Second party"
+                }
+              ]
+            }
+          }
+        ],
+        "typeOfResource": {
+          "usage": "primary",
+          "$": "text"
+        },
+        "genre": [
+          {
+            "authority": "lctgm",
+            "valueURI": "http://id.loc.gov/vocabulary/graphicMaterials/tgm003185",
+            "$": "Documents"
+          },
+          {
+            "authority": "aat",
+            "valueURI": "http://vocab.getty.edu/aat/300027590",
+            "usage": "primary",
+            "$": "legal documents"
+          }
+        ],
+        "originInfo": {
+          "dateCreated": {
+            "encoding": "w3cdtf",
+            "keyDate": "yes",
+            "$": "1899-09-26"
+          }
+        },
+        "language": {
+          "objectPart": "",
+          "languageTerm": [
+            {
+              "authority": "iso639-2b",
+              "valueURI": "http://id.loc.gov/vocabulary/iso639-2/eng",
+              "type": "code",
+              "$": "eng"
+            },
+            {
+              "authority": "iso639-2b",
+              "valueURI": "http://id.loc.gov/vocabulary/iso639-2/eng",
+              "type": "text",
+              "$": "English"
+            }
+          ]
+        },
+        "subject": [
+          {
+            "titleInfo": {
+              "title": {
+                "$": "Bonehill, Ralph. Young band master"
+              }
+            }
+          },
+          {
+            "name": {
+              "type": "personal",
+              "authority": "naf",
+              "valueURI": "http://id.loc.gov/authorities/names/n85181162",
+              "namePart": {
+                "$": "Bonehill, Ralph"
+              }
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "type": "local_bnumber",
+            "displayLabel": "NYPL catalog ID (B-number)",
+            "$": "b14520874"
+          },
+          {
+            "type": "local_mss",
+            "displayLabel": "MSS Unit ID",
+            "$": "2903"
+          },
+          {
+            "type": "local_archives_ead",
+            "displayLabel": "Archives EAD ID",
+            "$": "930677"
+          },
+          {
+            "type": "local_photo_order",
+            "displayLabel": "Photo Order",
+            "$": "51263"
+          },
+          {
+            "type": "uuid",
+            "$": "5fdf0e90-09bd-0131-0b33-58d385a7b928"
+          }
+        ],
+        "location": {
+          "physicalLocation": [
+            {
+              "authority": "marcorg",
+              "type": "repository",
+              "$": "nn"
+            },
+            {
+              "type": "division",
+              "$": "Manuscripts and Archives Division"
+            },
+            {
+              "type": "division_short_name",
+              "$": "Manuscripts and Archives Division"
+            },
+            {
+              "type": "code",
+              "$": "MSS"
+            }
+          ],
+          "shelfLocator": {
+            "$": "MssCol 2903"
+          }
+        },
+        "relatedItem": {
+          "type": "host",
+          "titleInfo": {
+            "title": {
+              "$": "Transfers of Copyrights"
+            }
+          },
+          "identifier": [
+            {
+              "type": "uuid",
+              "$": "d578eb50-a443-013d-018f-0242ac110004"
+            },
+            {
+              "type": "local_archives_ead",
+              "$": "930677"
+            },
+            {
+              "type": "local_archives_components",
+              "$": "726848"
+            }
+          ],
+          "relatedItem": {
+            "type": "host",
+            "titleInfo": {
+              "title": {
+                "$": "Series II.B: Legal"
+              }
+            },
+            "identifier": [
+              {
+                "type": "uuid",
+                "$": "e43f22f0-a43e-013d-29ec-0242ac110002"
+              },
+              {
+                "type": "local_archives_ead",
+                "$": "930548"
+              },
+              {
+                "type": "local_archives_components",
+                "$": "726719"
+              }
+            ],
+            "relatedItem": {
+              "type": "host",
+              "titleInfo": {
+                "title": {
+                  "$": "Series II: Administrative Files"
+                }
+              },
+              "identifier": [
+                {
+                  "type": "uuid",
+                  "$": "b6cbd6d0-a43e-013d-eb4b-0242ac110002"
+                },
+                {
+                  "type": "local_archives_ead",
+                  "$": "930454"
+                },
+                {
+                  "type": "local_archives_components",
+                  "$": "726625"
+                }
+              ],
+              "relatedItem": {
+                "type": "host",
+                "titleInfo": {
+                  "title": {
+                    "$": "Stratemeyer Syndicate records"
+                  }
+                },
+                "identifier": [
+                  {
+                    "type": "uuid",
+                    "$": "a592e400-a43e-013d-0b89-0242ac110003"
+                  },
+                  {
+                    "type": "local_bnumber",
+                    "$": "b14520874"
+                  },
+                  {
+                    "type": "local_mss",
+                    "$": "2903"
+                  },
+                  {
+                    "type": "local_archives_collections",
+                    "$": "2903"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "rightsStatement": {
+        "$": "The New York Public Library believes that this item is in the public domain under the laws of the United States, but did not make a determination as to its copyright status under the copyright laws of other countries. This item may not be in the public domain under the laws of other countries. Though not required, if you want to credit us as the source, please use the following statement, \"From The New York Public Library,\" and provide a link back to the item on our Digital Collections site. Doing so helps us track how our collection is used and helps justify freely releasing even more content in the future."
+      },
+      "rightsStatementURI": {
+        "$": "http://rightsstatements.org/vocab/NoC-US/1.0/"
+      }
+    }
+  }
+}

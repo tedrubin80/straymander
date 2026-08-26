@@ -1,3 +1,10 @@
+export type AlternateScan = {
+  uuid: string;
+  image: string;
+  item_link: string;
+  ocr?: string | null;
+};
+
 export type CorpusItem = {
   uuid: string;
   title: string;
@@ -10,12 +17,16 @@ export type CorpusItem = {
   rights_uri: string;
   image: string;
   ocr: string | null;
+  alternateScans?: AlternateScan[];
+  searchText?: string;
 };
 
 export type Corpus = {
   generated_at: string;
   collection: string;
   nypl_collection: string;
+  item_count: number;
+  scan_count: number;
   items: CorpusItem[];
 };
 
@@ -36,4 +47,10 @@ export function formatDate(date: string | null): string {
 export function nyplThumb(imageId: string | null): string | null {
   if (!imageId) return null;
   return `https://images.nypl.org/index.php?id=${imageId}&t=w`;
+}
+
+export function rightsLabel(uri: string): string {
+  if (uri.includes("NoC-US")) return "No Copyright — US";
+  if (uri.includes("UND")) return "Copyright undetermined";
+  return "See NYPL";
 }
