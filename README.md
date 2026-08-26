@@ -45,6 +45,19 @@ Rights vary per item (`rights_uri` in `index.csv`):
 
 Do not commit `NYPL_API_TOKEN`. Scans remain courtesy of The New York Public Library.
 
+## Site (timeline + OCR)
+
+Static Next.js app in [`web/`](web/) — no database. Documents are OCR'd with Tesseract at build time.
+
+```bash
+# Regenerate corpus.json + copy images (requires tesseract-ocr)
+npm run corpus
+
+cd web && npm install && npm run dev   # http://localhost:3000
+```
+
+Deploy to Vercel: **Root Directory = `web`**, no env vars needed.
+
 ## Refresh from NYPL
 
 Initial pull was via [`nypl-collections`](../nypl-collections) on this host:

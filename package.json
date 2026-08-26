@@ -1,0 +1,12 @@
+{
+  "name": "straymander",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "corpus": "node scripts/build_corpus.mjs",
+    "build:web": "cd web && npm run build"
+  },
+  "dependencies": {
+    "csv-parse": "^5.6.0"
+  }
+}

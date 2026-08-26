@@ -3,4 +3,10 @@
 __pycache__/
 *.py[cod]
 .DS_Store
-data/api_usage.jsonl
+# Node
+web/node_modules/
+web/.next/
+
+# Generated at build time (committed for Vercel — regenerate with npm run corpus)
+# web/public/corpus.json
+# web/public/images/
