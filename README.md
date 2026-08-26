@@ -58,7 +58,7 @@ Features: paneled timeline (1876–1938), full-text search over OCR, per-item pa
 
 Deploy to Vercel: **Root Directory = `web`**, no env vars.
 
-- **Live:** https://web-one-gamma-28.vercel.app
+- **Live:** https://straymander.vercel.app
 - **Dataset:** [Hugging Face](https://huggingface.co/datasets/datamatters24/straymander-stratemeyer) · [Kaggle](https://www.kaggle.com/datasets/theodorerubin/stratemeyer-syndicate-nypl)
 
 ## Publish & backup

@@ -1,0 +1,251 @@
+{
+  "nyplAPI": {
+    "request": {
+      "uuid": {
+        "$": "de52eb90-09b8-0131-22e0-58d385a7bbd0"
+      }
+    },
+    "response": {
+      "headers": {
+        "status": {
+          "$": "success"
+        },
+        "code": {
+          "$": "200"
+        },
+        "message": {
+          "$": "ok"
+        }
+      },
+      "mods": {
+        "version": "3.4",
+        "schemaLocation": "http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-4.xsd",
+        "titleInfo": [
+          {
+            "type": "",
+            "authority": "",
+            "usage": "primary",
+            "supplied": "yes",
+            "lang": "eng",
+            "script": "",
+            "title": {
+              "$": "Magdalene Baker Van Camp Stratemeyer wearing fur coat"
+            }
+          },
+          {
+            "type": "",
+            "authority": "",
+            "lang": "eng",
+            "script": "",
+            "title": {
+              "$": "Harriet Stratemeyer Adams wearing fur coat"
+            },
+            "partName": {
+              "$": "[original title]"
+            }
+          }
+        ],
+        "typeOfResource": {
+          "usage": "primary",
+          "$": "still image"
+        },
+        "genre": [
+          {
+            "authority": "lctgm",
+            "valueURI": "http://id.loc.gov/vocabulary/graphicMaterials/tgm007721",
+            "usage": "primary",
+            "$": "Photographs"
+          },
+          {
+            "authority": "lctgm",
+            "valueURI": "http://id.loc.gov/vocabulary/graphicMaterials/tgm008085",
+            "$": "Portraits"
+          }
+        ],
+        "originInfo": {
+          "dateCreated": [
+            {
+              "encoding": "w3cdtf",
+              "qualifier": "inferred",
+              "point": "start",
+              "keyDate": "yes",
+              "$": "1905"
+            },
+            {
+              "encoding": "w3cdtf",
+              "qualifier": "inferred",
+              "point": "end",
+              "$": "1935"
+            }
+          ]
+        },
+        "note": [
+          {
+            "type": "content",
+            "$": "Originally identified as Harriet Stratemeyer Adams but likely Magdalene Baker Van Camp Stratemeyer (Harriet's mother)."
+          },
+          {
+            "type": "content",
+            "$": "Unknown if original title from undigitized verso."
+          }
+        ],
+        "subject": {
+          "name": {
+            "type": "personal",
+            "namePart": {
+              "$": "Stratemeyer, Magdalene Baker Van Camp, 1869-1935"
+            }
+          }
+        },
+        "identifier": [
+          {
+            "type": "local_bnumber",
+            "displayLabel": "NYPL catalog ID (B-number)",
+            "$": "b14520874"
+          },
+          {
+            "type": "local_mss",
+            "displayLabel": "MSS Unit ID",
+            "$": "2903"
+          },
+          {
+            "type": "local_archives_ead",
+            "displayLabel": "Archives EAD ID",
+            "$": "930451"
+          },
+          {
+            "type": "local_photo_order",
+            "displayLabel": "Photo Order",
+            "$": "51263"
+          },
+          {
+            "type": "uuid",
+            "$": "ddf31d60-09b8-0131-8686-58d385a7bbd0"
+          }
+        ],
+        "location": {
+          "physicalLocation": [
+            {
+              "authority": "marcorg",
+              "type": "repository",
+              "$": "nn"
+            },
+            {
+              "type": "division",
+              "$": "Manuscripts and Archives Division"
+            },
+            {
+              "type": "division_short_name",
+              "$": "Manuscripts and Archives Division"
+            },
+            {
+              "type": "code",
+              "$": "MSS"
+            }
+          ],
+          "shelfLocator": {
+            "$": "MssCol 2903"
+          }
+        },
+        "relatedItem": {
+          "type": "host",
+          "titleInfo": {
+            "title": {
+              "$": "Harriet Stratemeyer"
+            }
+          },
+          "identifier": [
+            {
+              "type": "uuid",
+              "$": "c1961300-a442-013d-00d9-0242ac110004"
+            },
+            {
+              "type": "local_archives_ead",
+              "$": "930451"
+            },
+            {
+              "type": "local_archives_components",
+              "$": "726622"
+            }
+          ],
+          "relatedItem": {
+            "type": "host",
+            "titleInfo": {
+              "title": {
+                "$": "Series I.J: Visual Material"
+              }
+            },
+            "identifier": [
+              {
+                "type": "uuid",
+                "$": "e3834e90-a43e-013d-0b31-0242ac110003"
+              },
+              {
+                "type": "local_archives_ead",
+                "$": "930430"
+              },
+              {
+                "type": "local_archives_components",
+                "$": "726601"
+              }
+            ],
+            "relatedItem": {
+              "type": "host",
+              "titleInfo": {
+                "title": {
+                  "$": "Series I: Correspondence"
+                }
+              },
+              "identifier": [
+                {
+                  "type": "uuid",
+                  "$": "b688f570-a43e-013d-e10c-0242ac110003"
+                },
+                {
+                  "type": "local_archives_ead",
+                  "$": "929580"
+                },
+                {
+                  "type": "local_archives_components",
+                  "$": "725751"
+                }
+              ],
+              "relatedItem": {
+                "type": "host",
+                "titleInfo": {
+                  "title": {
+                    "$": "Stratemeyer Syndicate records"
+                  }
+                },
+                "identifier": [
+                  {
+                    "type": "uuid",
+                    "$": "a592e400-a43e-013d-0b89-0242ac110003"
+                  },
+                  {
+                    "type": "local_bnumber",
+                    "$": "b14520874"
+                  },
+                  {
+                    "type": "local_mss",
+                    "$": "2903"
+                  },
+                  {
+                    "type": "local_archives_collections",
+                    "$": "2903"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "rightsStatement": {
+        "$": "The copyright and related rights status of this item has been reviewed by The New York Public Library, but we were unable to make a conclusive determination as to the copyright status of the item. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use."
+      },
+      "rightsStatementURI": {
+        "$": "http://rightsstatements.org/vocab/UND/1.0/"
+      }
+    }
+  }
+}

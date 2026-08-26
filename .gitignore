@@ -1,14 +1,2 @@
-.env
-.venv/
-__pycache__/
-*.py[cod]
-.DS_Store
-# Node
-node_modules/
-web/node_modules/
-web/.next/
-exports/
-
-# Generated at build time (committed for Vercel — regenerate with npm run corpus)
-# web/public/corpus.json
-# web/public/images/
+.vercel
+.env*

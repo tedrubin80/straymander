@@ -3,7 +3,7 @@ import "./globals.css";
 import { loadCorpus } from "@/lib/corpus";
 import { nyplThumb } from "@/lib/types";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://web-one-gamma-28.vercel.app";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://straymander.vercel.app";
 
 function ogImage(): string {
   try {

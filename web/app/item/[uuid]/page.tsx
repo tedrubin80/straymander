@@ -23,7 +23,7 @@ export function generateMetadata({ params }: { params: Promise<{ uuid: string }>
       openGraph: {
         title: item.title,
         description: desc,
-        images: image ? [{ url: image.startsWith("http") ? image : `https://web-one-gamma-28.vercel.app${image}` }] : [],
+        images: image ? [{ url: image.startsWith("http") ? image : `https://straymander.vercel.app${image}` }] : [],
       },
     };
   });
