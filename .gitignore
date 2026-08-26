@@ -4,6 +4,7 @@ __pycache__/
 *.py[cod]
 .DS_Store
 # Node
+node_modules/
 web/node_modules/
 web/.next/
 
